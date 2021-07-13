@@ -1,0 +1,55 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="3">
+            <item index="0" class="java.lang.String" itemvalue="transliterate" />
+            <item index="1" class="java.lang.String" itemvalue="newsapi" />
+            <item index="2" class="java.lang.String" itemvalue="OpenGL" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="W605" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="cython_code" />
+          <option value="CythonRecommender" />
+          <option value="encoder" />
+          <option value="PIL.*" />
+          <option value="cv2.*" />
+          <option value="landing.models.Voting.objects" />
+          <option value="api.models.Voting.objects" />
+          <option value="api.models.Voice.objects" />
+          <option value="api.models.Variant.objects" />
+          <option value="api.models.Report.objects" />
+          <option value="api.models.Comment.objects" />
+          <option value="api.models.Rating.objects" />
+          <option value="geo_objects.models.GeoObject.objects" />
+          <option value="geo_objects.models.GeoObject.DoesNotExist" />
+          <option value="django.db.models.fields.related.OneToOneField.username" />
+          <option value="geo_objects.models.SubmittedGeoObject.objects" />
+          <option value="authorization.models.UserProfile.objects" />
+          <option value="geo_objects.models.Point.objects" />
+          <option value="geo_objects.models.Rectangle.objects" />
+          <option value="geo_objects.models.GeoPoint.objects" />
+          <option value="geo_objects.models.QuadTree.objects" />
+          <option value="django.db.models.fields.related.ForeignKey.get_json" />
+          <option value="news.models.NewsArticle.objects" />
+          <option value="reports.models.Report.objects" />
+          <option value="geo_objects.models.UserObjectExploration.id" />
+          <option value="geo_objects.models.UserObjectExploration.objects" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

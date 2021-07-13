@@ -1,0 +1,15 @@
+certifi==2021.5.30
+chardet==4.0.0
+colorama==0.4.4
+decorator==5.0.9
+idna==3.2
+imageio==2.9.0
+imageio-ffmpeg==0.4.4
+moviepy==1.0.3
+numpy==1.21.0
+opencv-python==4.5.3.56
+Pillow==8.3.1
+proglog==0.1.9
+requests==2.26.0
+tqdm==4.61.2
+urllib3==1.26.6
