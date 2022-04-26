@@ -13,8 +13,7 @@ Sample source image set: https://www.kaggle.com/splcher/animefacedataset
 
 def load_lookup_data():
     with open(LOOKUP_FILENAME, 'r') as lookup_file:
-        lookup_data = json.load(lookup_file)
-        return lookup_data
+        return json.load(lookup_file)
 
 
 def get_input_matrix(path, size=(50, 50)):
@@ -24,9 +23,9 @@ def get_input_matrix(path, size=(50, 50)):
     width, height = img.size
     matrix = []
     counter = 0
-    for i in range(height):
+    for _ in range(height):
         line = []
-        for j in range(width):
+        for _ in range(width):
             line.append(data[counter])
             counter += 1
         matrix.append(line)
