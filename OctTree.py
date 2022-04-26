@@ -13,23 +13,23 @@ def boundary_contains(boundary, color):
 
 
 def get_total_item_count(oct_tree_data):
-    if not oct_tree_data['divided']:
-        return len(oct_tree_data['items'])
-    else:
-        total = 0
-        for child_key in oct_tree_data['children']:
-            total += get_total_item_count(oct_tree_data['children'][child_key])
-        return total
+    return (
+        sum(
+            get_total_item_count(oct_tree_data['children'][child_key])
+            for child_key in oct_tree_data['children']
+        )
+        if oct_tree_data['divided']
+        else len(oct_tree_data['items'])
+    )
 
 
 def get_all_items(oct_tree_data):
     if not oct_tree_data['divided']:
         return oct_tree_data['items']
-    else:
-        result = []
-        for child_key in oct_tree_data['children']:
-            result.extend(get_all_items(oct_tree_data['children'][child_key]))
-        return result
+    result = []
+    for child_key in oct_tree_data['children']:
+        result.extend(get_all_items(oct_tree_data['children'][child_key]))
+    return result
 
 
 def get_image_using_lookup(lookup_data, color, random_score=50):
@@ -43,11 +43,10 @@ def get_image_using_lookup(lookup_data, color, random_score=50):
                 break
     items = current_root['items']
     if len(items) == 0:
-        if parent:
-            for brother_key in parent['children']:
-                items.extend(get_all_items(parent['children'][brother_key]))
-        else:
+        if not parent:
             return None
+        for brother_key in parent['children']:
+            items.extend(get_all_items(parent['children'][brother_key]))
     for i, item in enumerate(items):
         img_color = item['color']
         dist = ((color[0] - img_color[0]) ** 2 +
@@ -156,8 +155,7 @@ class OctTree:
 
 def get_average_color(img):
     img_resized = img.resize((1, 1))
-    color = img_resized.getpixel((0, 0))
-    return color
+    return img_resized.getpixel((0, 0))
 
 
 def create_lookup(limit=100_000, oct_tree_capacity=30):

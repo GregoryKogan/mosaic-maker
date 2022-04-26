@@ -30,8 +30,7 @@ def slice_frames(path, skip_factor=2):
 
 
 def convert_frame(frame_path):
-    img = Image.open(frame_path)
-    return img
+    return Image.open(frame_path)
 
 
 def make_video(result_frames, result_fps):
@@ -51,8 +50,8 @@ def make_video(result_frames, result_fps):
     os.mkdir(MUTE_VIDEO_TMP)
     out = cv2.VideoWriter(f'{MUTE_VIDEO_TMP}/mute.avi', cv2.VideoWriter_fourcc(*'DIVX'), result_fps, size)
 
-    for i in range(len(img_array)):
-        out.write(img_array[i])
+    for item in img_array:
+        out.write(item)
     out.release()
 
     print("Converting AVI to MP4")
