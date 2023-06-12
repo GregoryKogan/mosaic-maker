@@ -2,8 +2,10 @@
 Create image/video from lots of source images
 
 ## Examples
-2022-11-25_at_03-31-41.png![image](https://user-images.githubusercontent.com/60318411/203878609-487ddf5c-e78d-4d40-80a1-364d6c3a7abd.png)
-2022-11-25_at_03-34-16.png![image](https://user-images.githubusercontent.com/60318411/203878646-3dfe8d27-f97e-4d7b-b79f-054036b55522.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/60318411/203878609-487ddf5c-e78d-4d40-80a1-364d6c3a7abd.png" height="300"/>
+  <img src="https://user-images.githubusercontent.com/60318411/203878646-3dfe8d27-f97e-4d7b-b79f-054036b55522.png" height="300"/>
+<p/>
 
 *It's capable of video conversion too!*
 
