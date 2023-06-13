@@ -1,4 +1,4 @@
-# Mosaic-Maker
+# mosaic-maker
 Create image/video from lots of source images
 
 ## Examples
